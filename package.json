@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "npx jest"
+    "test": "npx jest"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
