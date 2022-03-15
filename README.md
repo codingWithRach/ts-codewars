@@ -14,7 +14,11 @@ Run all tests for all katas using the command:
 
 ## Katas
 
+### 7kyu
+
+- <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/7_kyu/nice_array/nice_array.md">Nice Array</a>
+
 ### 8kyu
 
-- <a href = "https://github.com/codingWithRach/ts-codewars/blob/d009e5de15da54d6bb3def6dbfd06c5217359048/src/8_kyu/gravity_flip/gravity_flip.md">Gravity Flip</a>
-- <a href = "https://github.com/codingWithRach/ts-codewars/blob/d009e5de15da54d6bb3def6dbfd06c5217359048/src/8_kyu/wolf_in_sheeps_clothing/wolf.md">A Wolf in Sheeps Clothing</a>
+- <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/8_kyu/gravity_flip/gravity_flip.md">Gravity Flip</a>
+- <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/8_kyu/wolf_in_sheeps_clothing/wolf.md">A Wolf in Sheeps Clothing</a>
