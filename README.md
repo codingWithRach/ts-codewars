@@ -17,6 +17,7 @@ Run all tests for all katas using the command:
 ### 7kyu
 
 - <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/7_kyu/nice_array/nice_array.md">Nice Array</a>
+- <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/7_kyu/parts_of_a_list/partlist.md">Parts of a List</a>
 
 ### 8kyu
 
