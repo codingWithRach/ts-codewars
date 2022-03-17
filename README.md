@@ -14,6 +14,10 @@ Run all tests for all katas using the command:
 
 ## Katas
 
+### 6kyu
+
+- <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/6_kyu/reverse_or_rotate/revrot.md">Reverse or rotate?</a>
+
 ### 7kyu
 
 - <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/7_kyu/nice_array/nice_array.md">Nice Array</a>
