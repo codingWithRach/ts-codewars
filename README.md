@@ -17,6 +17,7 @@ Run all tests for all katas using the command:
 ### 6kyu
 
 - <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/6_kyu/reverse_or_rotate/revrot.md">Reverse or rotate?</a>
+- <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/6_kyu/salesmans_travel/travel.md">Salesman's Travel</a>
 
 ### 7kyu
 
