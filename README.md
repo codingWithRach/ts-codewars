@@ -14,6 +14,10 @@ Run all tests for all katas using the command:
 
 ## Katas
 
+### 5kyu
+
+- <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/5_kyu/find_the_smallest/smallest.md">Find the smallest</a>
+
 ### 6kyu
 
 - <a href = "https://github.com/codingWithRach/ts-codewars/blob/main/src/6_kyu/reverse_or_rotate/revrot.md">Reverse or rotate?</a>
