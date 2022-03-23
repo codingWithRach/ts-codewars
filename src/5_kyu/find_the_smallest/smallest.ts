@@ -1,55 +1,39 @@
 export function smallest(n: number): number[] {
-  // if the lowest digit is already in position 0, ignore it and focus on the remaining digits
-  // repeat until we find the lowest digit in the remaining digits that is not in position 0
+  // find the first digit that isn't already in the right place
   const numArray: Array<number> = [...n.toString()].map((char) => Number(char));
-  let pos: number = numArray.indexOf(Math.min(...numArray));
+  let offset: number = numArray.findIndex(
+    (num, index) => num !== numArray.slice().sort((a, b) => a - b)[index]
+  );
+  if (offset === -1) return [n, 0, 0];
 
-  const remainingArray: Array<number> = numArray.slice();
-  while (pos === 0) {
-    remainingArray.shift();
-    pos = remainingArray.indexOf(Math.min(...remainingArray));
-  }
-  const offset: number = numArray.length - remainingArray.length;
-  const startArray: Array<number> = numArray.slice(0, offset);
-
-  // inline function to concatenate the specified arrays and return a string
-  const numString = (
-    arr1: Array<number>,
-    arr2: Array<number>,
-    arr3: Array<number>,
-    arr4: Array<number>
-  ): string => {
-    return arr1.concat(arr2, arr3, arr4).join("");
-  };
-
-  // considering the remaining array, there are two options for a solution
-  // first consider moving the first digit out into each other position
+  // considering the digits not already in the right position, there are two options for a solution
+  // first move the first of these digits out into each of the subsequent positions
   // we want to leave the rearranged numbers as strings so that they don't change length if they start with a zero
   const numStrings: Array<string> = [n.toString()];
   const positions: Array<Array<number>> = [[0, 0]];
-  for (let i = 1; i < remainingArray.length; i++) {
+  for (let i = offset + 1; i < numArray.length; i++) {
     numStrings.push(
-      numString(
-        startArray,
-        remainingArray.slice(1, i + 1),
-        [remainingArray[0]],
-        remainingArray.slice(i + 1)
-      )
+      numArray
+        .slice(0, offset)
+        .concat(
+          numArray.slice(offset + 1, i + 1),
+          [numArray[offset]],
+          numArray.slice(i + 1)
+        )
+        .join("")
     );
-    positions.push([offset, i + offset]);
+    positions.push([offset, i]);
   }
 
-  // now consider moving each of the other digits into the first position
-  for (let i = 1; i < remainingArray.length; i++) {
+  // now move each of the subsequent digits into the position of the first digit not already in the right place
+  for (let i = offset + 1; i < numArray.length; i++) {
     numStrings.push(
-      numString(
-        startArray,
-        [remainingArray[i]],
-        remainingArray.slice(0, i),
-        remainingArray.slice(i + 1)
-      )
+      numArray
+        .slice(0, offset)
+        .concat([numArray[i]], numArray.slice(offset, i), numArray.slice(i + 1))
+        .join("")
     );
-    positions.push([i + offset, offset]);
+    positions.push([i, offset]);
   }
 
   // determine the entry containing the smallest number
